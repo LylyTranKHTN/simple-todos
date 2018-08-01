@@ -1,0 +1,33 @@
+<body>
+    <div class="container">
+        <header>
+            <img class="image-team" src="https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.15752-9/31944821_638230203176121_8673589929176989696_n.png?_nc_cat=0&oh=de777f65b2ac7a8097846fc7dc3dcf6d&oe=5BD021D6"
+                width="600" height="150">
+            <h1>Raven Team({{incompleteCount}})</h1>
+
+            <label class="hide-completed">
+                <input type="checkbox" />
+            </label>
+
+            {{> loginButtons}}
+
+        </header>
+
+        {{#if currentUser}}
+        <form class="new-task">
+            <input type="text" name="text" placeholder="Thêm thành viên" />
+        </form>
+        {{/if}}
+
+        <ul>
+
+            {{#each tasks}} {{> task}} {{/each}}
+        </ul>
+    </div>
+</body>
+
+
+<!-- 
+<template name="task">
+    <li>{{text}}</li>
+</template> -->
